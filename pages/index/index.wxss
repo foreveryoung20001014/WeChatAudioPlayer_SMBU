@@ -1,0 +1,344 @@
+/*index:名称设置*/
+/* index.wxss */
+.text-container {
+  height: 100px; /* 设置容器的高度 */
+  display: flex;
+  align-items: center; /* 水平居中容器内的内容 */
+  justify-content: center; /* 垂直居中容器内的内容 */
+  transform: translate(-50%, -50%);
+  position: absolute; /* 使用绝对定位 */
+  top: 90%; /* 设置按钮距离顶部的位置为80% */
+  left: 50%; /* 设置按钮距离左侧的位置为50% */
+  flex-direction: column; /* 纵向排列子元素 */
+}
+.text-line {
+  font-size: 14px; /* 设置文本字体大小 */
+}
+
+
+/*index:导入音频*/
+.upload-button {
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: absolute; /* 使用绝对定位 */
+  top: 18%; /* 设置按钮距离顶部的位置为50% */
+  left: 95%; /* 设置按钮距离左侧的位置为50% */
+  font-size: 9px;
+  white-space: normal;
+  text-align: right;
+  color: #999999;
+}
+
+/*index:加载状态*/
+.loading {
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: relative; /* 使用绝对定位 */
+  top: 17%; /* 设置按钮距离顶部的位置为50% */
+  left: 0%; /* 设置按钮距离左侧的位置为50% */
+  font-size: 12px;
+  white-space: normal;
+  text-align: left;
+  color: #000000;
+}
+
+/*index：导入SRT*/
+.chooseSRT{
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: absolute; /* 使用绝对定位 */
+  top: 18%; /* 设置按钮距离顶部的位置为50% */
+  left: 95%; /* 设置按钮距离左侧的位置为50% */
+  font-size: 9px;
+  white-space: normal;
+  text-align: right;
+  color: #999999;
+}
+
+
+/*index:播放键*/
+button[disabled] {
+  background: rgb(255, 255, 255, 0) !important;
+}
+.play-button {
+  background-color: transparent;
+  border: none;
+  width: 120px; /* 保持按钮的宽度为20px */
+  height: 120px; /* 修改按钮的高度为20px以使其成为一个正方形 */
+  background: rgb(255, 255, 255, 0);
+  clip-path: circle(30% at 50% 50%); /* 使用圆形裁剪路径 */
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: absolute; /* 使用绝对定位 */
+  top: 50%; /* 设置按钮距离顶部的位置为50% */
+  left: 27%; /* 设置按钮距离左侧的位置为50% */
+  z-index: 800;
+}
+
+.play-icon-button {
+  width: 150px; /* 设置按钮的宽度 */
+  height: 80px; /* 设置按钮的高度 */
+  background-color: #30329e; /* 设置按钮的背景颜色 */
+  clip-path: polygon(50% 0, 50% 100%,70% 50%);
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: absolute; /* 使用绝对定位 */
+  top: 50%; /* 设置按钮距离顶部的位置为50% */
+  left: 25%; /* 设置按钮距离左侧的位置为50% */
+  z-index: 799;
+}
+
+
+/*index:暂停键*/
+.pause-icon-button {
+  width: 20px; /* 设置按钮的宽度 */
+  height: 60px; /* 设置按钮的高度 */
+  background-color: #30329e; /* 设置按钮的背景颜色 */
+  clip-path: polygon(25% 0, 25% 100%,55% 100%, 55% 0);
+  transform: translate(-50%, -50%);
+  position: absolute; /* 使用绝对定位 */
+  top: 50%; /* 设置按钮距离顶部的位置为50% */
+  left: 75%; /* 设置按钮距离左侧的位置为50% */
+  z-index: 698;
+}
+
+.pause-icon-button2 {
+  width: 20px; /* 设置按钮的宽度 */
+  height: 61px; /* 设置按钮的高度 */
+  background-color: #ffffff; /* 设置按钮的背景颜色 */
+  clip-path: polygon(35% 0, 35% 100%,45% 100%, 45% 0);
+  transform: translate(-50%, -50%);
+  position: absolute; /* 使用绝对定位 */
+  top: 50%; /* 设置按钮距离顶部的位置为50% */
+  left: 75%; /* 设置按钮距离左侧的位置为50% */
+  z-index: 699;
+}
+
+.pause-button {
+  background-color: transparent;
+  border: none;
+  width: 120px; /* 保持按钮的宽度为20px */
+  height: 120px; /* 修改按钮的高度为20px以使其成为一个正方形 */
+  background: rgb(255, 255, 255, 0);
+  clip-path: circle(40% at 50% 50%); /* 使用圆形裁剪路径 */
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: absolute; /* 使用绝对定位 */
+  top: 50%; /* 设置按钮距离顶部的位置为50% */
+  left: 69%; /* 设置按钮距离左侧的位置为50% */
+  z-index: 700;
+}
+
+/*index:进度条*/
+.progress-bar {
+  width: 100%;
+  height: 10%;
+  transform: translate(-50%, -50%);
+  position: absolute; /* 使用绝对定位 */
+  top: 0%; /* 设置按钮距离顶部的位置为50% */
+  left: 50%; /* 设置按钮距离左侧的位置为50% */
+  background-color: #f0f0f0;
+}
+.progress {
+  height: 100%;
+  transition: width 0.1s linear;
+}
+
+/*index:音频切换*/
+.switch-button-right {
+  background-color: transparent;
+  border: none;
+  width: 80px; /* 设置按钮的宽度 */
+  height: 80px; /* 设置按钮的高度 */
+  position: absolute; /* 使用绝对定位 */
+  top: 80%; /* 设置按钮距离顶部的位置为80% */
+  left: 65%; /* 设置按钮距离左侧的位置为65% */
+  border-right: 80px solid #ffffff;
+  border-top: 80px solid #ffffff;
+  border-bottom: none;
+  border-left: none;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+
+.switch-button-left {
+  background-color: transparent;
+  border: none;
+  width: 80px; /* 设置按钮的宽度 */
+  height: 80px; /* 设置按钮的高度 */
+  position: absolute; /* 使用绝对定位 */
+  top: 80%; /* 设置按钮距离顶部的位置为80% */
+  right: 65%; /* 设置按钮距离右侧的位置为65% */
+  border-left: 80px solid #ffffff;
+  border-top: 80px solid #ffffff;
+  border-bottom: none;
+  border-right: none;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+
+/*index:题目栏*/
+.header {
+  width: 100%;
+  height: 10%;
+  background-color: #30329e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  text-align: center; /* Add this line to center align the text horizontally */
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: absolute; /* 使用绝对定位 */
+  top: 10%; /* 设置按钮距离顶部的位置为50% */
+  left: 50%; /* 设置按钮距离左侧的位置为50% */
+}
+
+/*index:慢速播放按钮*/
+.slow-play-button {
+  width: 40px; /* 设置圆点的直径 */
+  height: 40px; /* 设置圆点的直径 */
+  background-color: #30329e; /* 设置圆点的背景颜色 */
+  border-radius: 50%; /* 设置border-radius为50%可以使元素变为圆形 */
+  position: absolute; /* 使用绝对定位 */
+  top: 70%; /* 设置圆点距离顶部的位置为70% */
+  left: 50%; /* 设置圆点距离左侧的位置为50% */
+  transform: translate(-50%, -50%); /* 将圆点定位到一半高度、一半宽度的位置 */
+
+  display: flex; /* 使用flex布局以便于居中对齐文本 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  color: #ffffff; /* 设置文字颜色为白色 */
+  font-size: 12px; /* 设置字体大小 */
+}
+
+.status-text {
+  position: absolute; /* 使用绝对定位 */
+  top: 60%; /* 设置文本距离顶部的位置为20% */
+  left: 50%; /* 设置文本距离左侧的位置为50% */
+  transform: translate(-50%, -50%); /* 将文本定位到一半高度、一半宽度的位置 */
+  text-align: center; /* 设置文本居中 */
+  font-size: 20px; /* 设置字体大小 */
+  color: #9e307d; /* 设置字体颜色 */
+}
+
+/*index:播放次数*/
+.bottom {
+  position: absolute; /* 使用绝对定位 */
+  top: 97%; /* 设置文本距离顶部的位置为20% */
+  left: 50%; /* 设置文本距离左侧的位置为50% */
+  transform: translate(-50%, -50%); /* 将文本定位到一半高度、一半宽度的位置 */
+  text-align: center; /* 设置文本居中 */
+  font-size: 10px; /* 设置字体大小 */
+  color: #9e307d; /* 设置字体颜色 */
+}
+
+/*index:字幕*/
+.subtitles{
+  position: absolute; /* 使用绝对定位 */
+  top: 27%; /* 设置文本距离顶部的位置为20% */
+  left: 50%; /* 设置文本距离左侧的位置为50% */
+  transform: translate(-50%, -50%); /* 将文本定位到一半高度、一半宽度的位置 */
+  text-align: center; /* 设置文本居中 */
+  font-size: 20px; /* 设置字体大小 */
+  color: #3f2088; /* 设置字体颜色 */
+}
+
+.switch-icon-right {
+  width: 20px; /* 设置按钮的宽度 */
+  height: 50px; /* 设置按钮的高度 */
+  background-color: #30329e; /* 设置按钮的背景颜色 */
+  clip-path: polygon(50% 0, 50% 100%,70% 50%);
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: absolute; /* 使用绝对定位 */
+  top: 90%; /* 设置按钮距离顶部的位置为50% */
+  left: 75%; /* 设置按钮距离左侧的位置为50% */
+  width: 120px;
+  height: 60px;
+  background-color: #30329e; /* Using the original color as an example */
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 90%;
+  left: 75%;
+}
+
+.switch-icon-left {
+  background-color: #30329e; /* 设置按钮的背景颜色 */
+  clip-path: polygon(30% 50%,50% 0%, 50% 100%);
+  transform: translate(-50%, -50%); /* 将按钮定位到一半高度、一半宽度的位置 */
+  position: absolute; /* 使用绝对定位 */
+  top: 90%; /* 设置按钮距离顶部的位置为50% */
+  left: 25%; /* 设置按钮距离左侧的位置为50% */
+  width: 120px;
+  height: 60px;
+  background-color: #30329e; /* Using the original color as an example */
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 90%;
+  left: 25%;
+}
+
+/*index:样式*/
+.loader {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2); /*这里使用rgba是利用了其中的alpha通道设置透明度，这样可以避免子元素的透明度改变*/
+  z-index: 999;
+}
+
+.ring {
+  position: relative;
+  bottom: 80rpx;
+  width: 45px;
+  height: 45px;
+  border: 4px solid #4b9cdb;
+  border-radius: 100%;
+}
+
+.ball {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #4282b3;
+}
+
+.ball-loader {
+  position: absolute;
+  width: 45px;
+  height: 50px;
+  animation: loading 1.3s linear infinite; /*其中的linear表示动画从头到尾的速度一样，infinite是不断循环动画*/
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.slow-play-rates{
+  position: absolute; /* 使用绝对定位 */
+  top: 70%; /* 设置圆点距离顶部的位置为70% */
+  left: 50%; /* 设置圆点距离左侧的位置为50% */
+  transform: translate(-50%, -50%); /* 将圆点定位到一半高度、一半宽度的位置 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+.switch-language-button {
+  width: 40px;         /* 调整宽度 */
+  height: 40px;         /* 调整高度 */
+  background-color:rgba(255, 255, 255, 0);   /* 背景颜色 */
+  color: #30329e;      /* 文本颜色 */
+  position: absolute;     /* 固定定位 */
+  top: 15%;        /* 距离屏幕底部10px */
+  left: 0%;           /* 水平居中 */
+  transform: translateX(-50%, -50%);  /* 微调以确保水平居中 */
+  /* 减小文本大小 */
+  font-size: 10px;  /* 根据实际情况调整 */
+}

@@ -1,0 +1,85 @@
+<!-- 显示当前音频播放进度 -->
+<view class="progress-bar"> 
+  <!--<view class="progress" style="width: {{currentProgress}}\%"></view>-->
+  <progress class="progress" percent="{{currentProgress}}" stroke-width="100" color="green"/>
+</view>
+
+<!-- 显示题目内容 -->
+<view class="header">
+  <text>{{texts[language].task}}</text>
+</view>
+
+<!--显示歌曲字幕状态-->>
+<!-- index.wxml -->
+<view class="text-container">
+  <text class="text-line">{{texts[language].num}}.{{pathindex+1}}</text>
+  <text class="text-line">{{texts[language].setSRT}}</text>
+</view>
+
+
+<!-- 根据 isLoading 的状态来显示 loading -->
+<text wx:if="{{isLoading}}" class="loading">{{texts[language].loading}}</text>
+
+
+<!-- 显示当前的字幕文本 -->
+<view>
+  <text class="subtitles" bindtap="onSubtitleWordClick" data-word="{{currentSubtitle}}">{{currentSubtitle}}</text>
+</view>
+
+<!-- 播放音频按钮 -->
+<button class="play-button" bindtap="playAudio" disabled="{{isPlayAudio}}"></button>
+<view class="play-icon-button"></view>
+<!-- 暂停音频按钮 -->
+<button class="pause-button" bindtap="pauseAudio"></button>
+<button class="pause-icon-button"></button>
+<button class="pause-icon-button2"></button>
+
+<!-- 慢速播放按钮 -->
+<!--<view class="slow-play-button" bindtap="slowPlayAudio">SLOW</view>-->
+<!-- 显示播放速率（慢速/正常） -->
+<!--<view class="status-text">{{playStatus}}</view>-->
+
+<!-- 上一首/下一首按钮 -->
+
+<view class="switch-button-container-right" bindtap="switchToNextPath">
+  <button class="switch-button-right"></button>
+  <view class="switch-icon-right"></view>
+</view>
+    
+
+<view class="switch-button-container-left" bindtap="switchToPrevPath">
+  <button class="switch-button-left"></button>
+  <view class="switch-icon-left"></view>
+</view>
+    
+
+
+<!-- 上传音频按钮 -->
+<!--<view class = "upload-button" bindtap="chooseAudio">Audio <br/> File </view>-->
+<!--<text class = "upload-button" bindtap="chooseAudio"> new <br/> audio </text>-->
+<!-- 上传字幕按钮 -->
+<!--<view class="chooseSRT" bindtap="chooseSRTFile">Subtitle <br/> File</view>-->
+
+<!-- 显示当前音频播放次数 -->
+<view class="bottom">
+  {{texts[language].repeatedTimes}}{{currentPlayCount}}
+</view>
+
+<!-- 加载器 -->
+<view class="loader" wx:if="{{loader}}">
+  <view class="ring">
+    <view class="ball-loader">
+      <view class="ball"></view>
+    </view>
+  </view>
+</view>
+
+<picker-view class="slow-play-rates" indicator-style="height: 50px;" style="width: 30%; height: 150px;" value="{{value}}" bindchange="bindChange" bindpickstart="bindPickstart" bindpickend="bindPickend">
+  <picker-view-column>
+    <view wx:for="{{rateOptions[language]}}" wx:key="{{index}}" style="line-height: 50px; height: 30px; text-align: center;">{{item}}</view>
+    <view wx:for="{{rates}}" wx:key="{{rates}}" style="line-height: 50px; height: 30px; text-align: center;">{{item}}</view>
+  </picker-view-column>
+</picker-view>
+
+<button size="mini" class="switch-language-button" bindtap="switchLanguage">{{switchLanguageButton[language]}}</button>
+
